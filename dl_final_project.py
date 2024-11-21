@@ -14,7 +14,6 @@ Import necessary libraries
 # Import necessary libraries for data manipulation, model training, and evaluation
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import StandardScaler, LabelEncoder
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
@@ -87,7 +86,6 @@ predictions_df = pd.DataFrame({
 })
 # Map numerical predictions to "Approved" or "Not Approved"
 predictions_df['Prediction_Text'] = predictions_df['Predicted'].map({1: "Approved", 0: "Not Approved"})
-
 # Display the predictions
 print(predictions_df)
 
